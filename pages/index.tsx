@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Layout from '../theme/globalStyle'
+import MainContainerProps from '../components/layout/mainContainer'
 
 const Home: NextPage = () => {
   return (<>
@@ -10,7 +11,7 @@ const Home: NextPage = () => {
         <meta name="Six dices game" content="Six dices game" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>hello</div>
+      <MainContainerProps />
     </Layout>
   </>
   )
