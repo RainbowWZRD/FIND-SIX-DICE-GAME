@@ -30,6 +30,7 @@ justify-content: space-evenly;
 `
 
 export const LinkWrapper = styled.div`
+opacity: ${props => props.active ? "1" : "0.4"};
 width: 10rem;
 display: flex;
 flex-direction: column;
