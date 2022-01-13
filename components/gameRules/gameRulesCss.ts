@@ -8,8 +8,10 @@ align-items: center;
 margin-top: 3rem;
 & h1 {
     font-size: 3rem;
+    margin-bottom: 1rem;
 }
 & h2 {
     font-size: 2rem;
+    margin-bottom: .5rem;
 }
 `

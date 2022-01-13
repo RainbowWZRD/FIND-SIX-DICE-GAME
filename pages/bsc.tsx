@@ -4,6 +4,7 @@ import { GlobalStyle } from "../theme/globalStyle";
 import ChainBars from "../components/layout/chainsBar";
 import GameRules from "../components/gameRules/gameRules";
 import MainContainer from "../components/layout/mainContainer";
+import DicesContainer from "../components/dicesContainer/dicesContainer";
 
 
 const Bsc: NextPage = () => {
@@ -12,6 +13,7 @@ const Bsc: NextPage = () => {
             <GlobalStyle />
             <ChainBars />
             <GameRules />
+            <DicesContainer />
         </MainContainer>
     </>
 }
