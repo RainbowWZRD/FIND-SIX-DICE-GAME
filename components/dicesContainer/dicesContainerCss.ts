@@ -12,4 +12,13 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 margin-top:3rem ;
+
+@media (max-width : 1000px) {
+    width: 50rem;
+    }
+
+    @media (max-width : 500px) {
+    width: 30rem;
+    height: 40rem;
+    }
 `

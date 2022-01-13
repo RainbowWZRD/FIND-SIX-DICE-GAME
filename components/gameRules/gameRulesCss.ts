@@ -13,5 +13,13 @@ margin-top: 3rem;
 & h2 {
     font-size: 2rem;
     margin-bottom: .5rem;
+
+    @media (max-width : 500px) {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }
 `

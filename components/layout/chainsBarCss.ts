@@ -11,6 +11,15 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-top:3rem ;
+
+@media (max-width : 1000px) {
+    width: 50rem;
+    }
+
+    @media (max-width : 500px) {
+    width: 35rem;
+    height: 10rem;
+    }
 `
 
 export const ButtonsWrapper = styled.div`

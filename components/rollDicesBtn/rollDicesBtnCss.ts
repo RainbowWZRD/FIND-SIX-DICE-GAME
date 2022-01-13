@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Btn = styled.button`
-font-family: "Open sans";
+font-family: 'Open Sans', sans-serif;
 color: white;
 border: none;
 font-weight: 900;
