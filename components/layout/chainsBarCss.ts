@@ -30,11 +30,11 @@ justify-content: space-evenly;
 `
 
 export const LinkWrapper = styled.div`
-display: flex;
 width: 10rem;
 display: flex;
+flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: space-evenly;
 height: auto;
 & a {
     color: white;
