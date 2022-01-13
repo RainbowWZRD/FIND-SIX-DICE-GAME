@@ -2,7 +2,16 @@ import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 
 export const GlobalStyle = createGlobalStyle`
-html,
+@font-face {
+	font-family: "OpenSans" ;
+	src: url('../assets/OpenSans/OpenSans-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+html {
+	font-size: 10px;
+}
 body {
     margin: 0;
     padding: 0;
@@ -55,14 +64,14 @@ table {
 `
 
 interface ILayoutProps {
-    children?: React.ReactNode;
+	children?: React.ReactNode;
 }
 
 const Layout = ({ children }: ILayoutProps) => {
-    return <>
-        <GlobalStyle />
-        {children}
-    </>
+	return <>
+		<GlobalStyle />
+		{children}
+	</>
 }
 
 export default Layout;

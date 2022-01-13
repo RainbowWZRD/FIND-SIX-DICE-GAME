@@ -5,10 +5,10 @@ interface IMainContainerProps {
     children?: React.ReactNode;
 }
 
-const MainContainerProps = ({ children }: IMainContainerProps) => {
+const MainContainer = ({ children }: IMainContainerProps) => {
     return <ContainerLayout>
         {children}
     </ContainerLayout>
 }
 
-export default MainContainerProps;
+export default MainContainer;
