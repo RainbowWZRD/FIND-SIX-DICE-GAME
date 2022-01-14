@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../theme/globalStyle';
@@ -6,16 +6,22 @@ import MainContainer from '../components/layout/mainContainer';
 import ChainBars from '../components/layout/chainsBar';
 import GameRules from '../components/gameRules/gameRules';
 import DicesContainer from '../components/dicesContainer/dicesContainer';
-import { ethers, providers } from 'ethers';
+import {MetaMaskInpageProvider} from '@metamask/providers'
+
+//Declaring a global interface to let Typescrypt be aware of the existence of ethereum' module
+//which is located in the global window
+declare global {
+  interface Window {
+    ethereum: MetaMaskInpageProvider;
+  }
+}
 
 const Home: NextPage = () => {
-
   useEffect(() => {
-    const loadProvider = async () => {
-      const provider = new ethers.providers.Web3Provider(window.ethereum)
-      const signer = provider.getSigner()
+    const ethereum = window.ethereum as MetaMaskInpageProvider;
+    if (typeof window.ethereum !== 'undefined') {
+      ethereum.request<string[]>({ method: 'eth_requestAccounts' });
     }
-    loadProvider()
   })
 
   return (<>
