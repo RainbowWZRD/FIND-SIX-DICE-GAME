@@ -14,11 +14,12 @@ const ChainBars = () => {
     })
 
     useEffect(() => {
-        if (window.location.href.includes("ethereum")) {
+        const windowLocation = window.location.href;
+        if (windowLocation.includes("ethereum")) {
             setActive((prev) => {
                 return { ...prev, ethereum: true }
             })
-        } else if (window.location.href.includes("bsc")) {
+        } else if (windowLocation.includes("bsc")) {
             setActive((prev) => {
                 return { ...prev, bsc: true }
             })
@@ -27,7 +28,8 @@ const ChainBars = () => {
                 return { ...prev, matic: true }
             })
         }
-    })
+    }, [])
+    
     return <ChainSContainer>
         <ButtonsWrapper>
             <LinkWrapper active={active.ethereum}>
