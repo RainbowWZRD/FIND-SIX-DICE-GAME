@@ -16,10 +16,20 @@ const config: HardhatUserConfig = {
       url: process.env.MORALIS_BSC_TESTNET,
       accounts: [process.env.PRIVATE_KEY!]
     },
-    mumbay : {
-      url : process.env.INFURA_POLYGON_TESTNET,
-      accounts: [process.env.PRIVATE_KEY!],
-    }
+    'thunder-testnet': {
+           url: 'https://testnet-rpc.thundercore.com',
+         chainId: 18,
+         gas: 90000000,
+         gasPrice: 1e9,
+         accounts: [process.env.PRIVATE_KEY!],
+     },
+       'thunder-mainnet': {
+           url: 'https://mainnet-rpc.thundercore.com',
+         chainId: 108,
+         gas: 90000000,
+         gasPrice: 1e9,
+         accounts: [process.env.PRIVATE_KEY!],
+     },
   },
 };
 

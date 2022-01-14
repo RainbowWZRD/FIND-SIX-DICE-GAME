@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       ethereum.request<string[]>({ method: 'eth_requestAccounts' });
     }
   })
-
+  
   return (<>
     <Layout>
       <Head>
